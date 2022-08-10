@@ -52,11 +52,19 @@ main {
 .operator,
 .negative,
 .equals {
-    background: orange;
+    background: rgb(247, 141, 222);
 }
 
 #title {
     font-size: 2rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#sub-title {
+    font-size: 0.5rem;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -83,7 +91,7 @@ td {
 }
 
 th {
-    background-color: orange;
+    background-color: rgb(247, 141, 222);
     color: white;
 }
 
@@ -109,6 +117,7 @@ tr:nth-child(even) {
 
 .btn:hover {
     font-weight: bold;
+    color: rgb(206, 24, 163);
 }
 
 @media (max-width: 600px) {
