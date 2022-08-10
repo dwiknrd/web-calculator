@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session Storage</title>
+</head>
+
+<body>
+    <p>
+        Kamu telah menekan tombol <span id="counter">0</span> kali.
+    </p>
+    <button id="increment">Tekan untuk menambahkan counter</button>
+
+    <script>
+        const cacheKey = "NUMBER_OF_CLICKS";
+        if (typeof(Storage) !== "undefined") {
+
+            if (sessionStorage.getItem(cacheKey) === "undefined") {
+                sessionStorage.setItem(cacheKey, 0);
+            }
+
+            const button = document.getElementById("increment");
+            const count = document.getElementById("counter");
+            button.addEventListener('click', (event) => {
+                let number = sessionStorage.getItem(cacheKey);
+                number++;
+                sessionStorage.setItem(cacheKey, number);
+                count.innerText = sessionStorage.getItem(cacheKey);
+            });
+        } else {
+            document.getElementById("increment").innerText = "Sorry, your browser does not support Web Storage...";
+        }
+    </script>
+</body>
+
+</html>

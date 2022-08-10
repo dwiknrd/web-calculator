@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.flex-container-column {
+    display: flex;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: right;
+    flex-direction: column;
+}
+
+.flex-container-row {
+    display: flex;
+}
+
+.btn {
+    flex-basis: 25%;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 40px;
+    border: 1px solid black;
+    background: -webkit-linear-gradient(top, #d2d2d2, #ddd);
+    cursor: pointer;
+    transition: all;
+    animation-duration: 250ms;
+}
+
+main {
+    margin: 40px;
+}
+
+.double {
+    flex-basis: 50%;
+}
+
+.display {
+    color: white;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #333;
+    border: 1px solid black;
+    font-size: 2rem;
+}
+
+.operator,
+.negative,
+.equals {
+    background: orange;
+}
+
+#title {
+    font-size: 2rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.history {
+    width: 80%;
+    margin: 30px auto 0 auto;
+    overflow: scroll;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid black;
+}
+
+th,
+td {
+    text-align: center;
+    padding: 16px;
+}
+
+th {
+    background-color: orange;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+@media screen and (max-width: 513px) {
+    .btn {
+        padding: 10px;
+    }
+    .history {
+        width: 100%;
+    }
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 30px;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .btn {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    .btn {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 300px) {
+    .btn {
+        padding: 5px;
+    }
+}
